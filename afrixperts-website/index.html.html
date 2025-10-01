@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Afrixperts Ltd - Your trusted education consultancy connecting African students to world-class universities. Study abroad services, visa assistance, and career counselling.">
+    <meta name="keywords" content="study abroad, education consultancy, Rwanda, university admissions, visa assistance, scholarships">
+    <title>Afrixperts Ltd | Study Abroad Rwanda | Global Education Solutions</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #1a5490;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #1a5490;
+        }
+        
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, rgba(26, 84, 144, 0.95) 0%, rgba(41, 128, 185, 0.95) 100%), 
+                        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==');
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1a5490;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5em;
+            color: #1a5490;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Focus Section */
+        .focus-section {
+            background: linear-gradient(135deg, #1a5490 0%, #2980b9 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .focus-section .section-title {
+            color: white;
+        }
+        
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .focus-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .focus-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .focus-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+        
+        .focus-item h3 {
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #1a5490;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5em;
+            color: #1a5490;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Knowledge Section */
+        .knowledge-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .knowledge-section .section-title {
+            color: white;
+        }
+        
+        .knowledge-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .exhibition-card {
+            background: white;
+            color: #333;
+            padding: 0;
+            border-radius: 15px;
+            margin-top: 50px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .exhibition-image {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+        
+        .exhibition-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .exhibition-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 84, 144, 0.95), transparent);
+            padding: 40px;
+            color: white;
+        }
+        
+        .exhibition-overlay h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background: #f8f9fa;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Partners Section */
+        .partners-section {
+            background: white;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .partner-logo {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .partner-logo span {
+            font-size: 1.5em;
+            color: #1a5490;
+            font-weight: bold;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            background: linear-gradient(135deg, #1a5490 0%, #2980b9 100%);
+            color: white;
+        }
+        
+        .testimonials-section .section-title {
+            color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            line-height: 1.8;
+            color: #ecf0f1;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .about-content,
+            .services-grid,
+            .testimonials-grid,
+            .gallery-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .focus-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-image {
+                height: 300px;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .focus-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-container">
+                    <img src="logo.png" alt="Afrixperts Ltd Logo" class="logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <h1>Your Gateway to Global Education and Smooth Travel all around the World</h1>
+            <p class="hero-subtitle">Connecting African students to world-class universities and brighter futures.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>Afrixperts Ltd is a trusted education consultancy dedicated to guide students toward global opportunities. With strong partnerships with universities worldwide.</p>
+                    <p>Our mission is to open doors to world-class education and help every student build a brighter future and career.</p>
+                </div>
+                <div class="about-image">
+                    <img src="consultation.jpg" alt="Professional consultation at Afrixperts">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Section -->
+    <section class="section focus-section">
+        <div class="container">
+            <h2 class="section-title">We Focus On</h2>
+            <div class="focus-grid">
+                <div class="focus-item">
+                    <div class="focus-icon">💬</div>
+                    <h3>Counselling</h3>
+                </div>
+                <div class="focus-item">
+                    <div class="focus-icon">📄</div>
+                    <h3>Applications</h3>
+                </div>
+                <div class="focus-item">
+                    <div class="focus-icon">✈️</div>
+                    <h3>Visa</h3>
+                </div>
+                <div class="focus-item">
+                    <div class="focus-icon">🌍</div>
+                    <h3>Travel</h3>
+                </div>
+                <div class="focus-item">
+                    <div class="focus-icon">🤝</div>
+                    <h3>Support</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Explore Our Services</h2>
+            <p class="section-subtitle">At Afrixperts Ltd, we make studying abroad a smooth and stress-free journey. From counselling and admissions to visas, travel, and post-arrival support — every step is covered.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Career Counselling</h3>
+                    <p>Covers career/educational guidance, helping students clarify their goals before making decisions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Offers & Admissions</h3>
+                    <p>End-to-end application management, from submission to securing offers, ensuring students find the best academic fit.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Scholarships and Essays</h3>
+                    <p>Personal statement and essay advisory to make applications stand out plus Assistance in identifying, applying, and securing financial aid.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Visa & Interview Guidance</h3>
+                    <p>Guidance on application forms, documentation, and interview prep.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Flight & Accommodation</h3>
+                    <p>Orientation, travel prep, and Covering accommodation, airport pickup, and settling-in services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Post-Arrival Support</h3>
+                    <p>Continuous support after arrival to ensure smooth transition and successful settlement in your new environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Section -->
+    <section class="section knowledge-section">
+        <div class="container">
+            <h2 class="section-title">Stay Ahead With Expert Knowledge</h2>
+            <div class="knowledge-content">
+                <p class="section-subtitle">Gain insights that simplify your study abroad journey.</p>
+                <p class="section-subtitle">Our expert guidance helps you make smarter choices, faster. Stay informed, stay confident, and step into global opportunities.</p>
+                
+                <div class="exhibition-card">
+                    <div class="exhibition-image">
+                        <img src="exhibition.jpg" alt="Africa International Education Exhibition">
+                        <div class="exhibition-overlay">
+                            <h3>Join the Africa International Education Exhibition</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">See the journeys of students who achieved their dreams with Afrixperts</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="graduate.jpg" alt="Graduate celebrating success">
+                </div>
+                <div class="gallery-item">
+                    <img src="university.jpg" alt="Beautiful university campus">
+                </div>
+                <div class="gallery-item">
+                    <img src="consultation.jpg" alt="Student consultation session">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section partners-section">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">We believe every firm is a valuable, long-term partner.</p>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <span>University Partner 1</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 2</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 3</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 4</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 5</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 6</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 7</span>
+                </div>
+                <div class="partner-logo">
+                    <span>University Partner 8</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">The Perfect Customer Experience</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Afrixperts made choosing the right university so easy — their guidance was spot on!"</p>
+                    <p class="testimonial-author">Grace Uwimana</p>
+                    <p class="testimonial-role">Student</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The visa process felt overwhelming at first, but Afrixperts walked me through every detail. From paperwork to flight booking, everything was smooth and stress-free."</p>
+                    <p class="testimonial-author">Samuel Nkurunziza</p>
+                    <p class="testimonial-role">Public worker</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I landed in Turkey with confidence knowing Afrixperts had arranged my accommodation in advance."</p>
+                    <p class="testimonial-author">Linda Karemera</p>
+                    <p class="testimonial-role">Tourist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="logo.png" alt="Afrixperts Ltd Logo" class="footer-logo">
+                    <p>Your trusted partner for global education opportunities. We guide African students to world-class universities and brighter futures.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Kigali, Nyarugenge</li>
+                        <li>MIC Building, 1st Floor</li>
+                        <li>Door No.04</li>
+                        <li>📧 info@afrixperts.com</li>
+                        <li>📞 +250 XXX XXX XXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Afrixperts Ltd. All rights reserved. | Study Abroad Rwanda</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
